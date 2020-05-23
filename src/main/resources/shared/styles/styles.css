@@ -1,0 +1,52 @@
+h1 {
+    color: white;
+    text-align: center;
+    background-color: darkmagenta;
+    width: 500px;
+    margin: 20px;
+    padding: 10px;
+    border: 3px solid blue;
+}
+
+p {
+    color: red;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+table {
+    border: 2px solid blue;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+th {
+    background-color: lightgray;
+}
+
+div {
+    padding: 15px;
+}
+
+.name {
+    color: blue;
+    background-color: lightgray;
+    text-decoration: underline;
+}
+
+#top {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#middle {
+    font-size: 24px;
+}
