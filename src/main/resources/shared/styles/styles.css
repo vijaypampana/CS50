@@ -38,6 +38,8 @@ div {
 
 .name {
     color: blue;
+    background-color: lightgray;
+    text-decoration: underline;
 }
 
 #top {
