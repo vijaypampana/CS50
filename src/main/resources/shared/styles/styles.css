@@ -50,3 +50,12 @@ div {
 #middle {
     font-size: 24px;
 }
+
+/* All descendents including child and its childs */
+ol li {
+    color: blue;
+}
+
+ol > li {
+    color: Red;
+}

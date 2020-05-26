@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Example</title>
+        <link type="text/css" rel="stylesheet" href="../styles/styles.css">
+    </head>
+    <body>
+        <h1>Forms Examples</h1>
+        <div>
+            <span>Enter Username : </span>
+            <input name="name" type="text" placeholder="Name">
+            <br>
+            <span>Enter Password : </span>
+            <input name="password" type="password" placeholder="Password">
+        </div>
+
+        <div>
+            Favorite color?
+            <input type="radio" name="color" value="red"> Red
+            <input type="radio" name="color" value="green"> Green
+            <input type="radio" name="color" value="blue"> Blue
+            <input type="radio" name="color" value="other"> Other
+        </div>
+
+        <div>
+            <input name="country" list="countries" placeholder="Country">
+            <datalist id="countries">
+                <option value="India">
+                <option value="USA">
+                <option value="Britain">
+            </datalist>
+        </div>
+    </body>
+</html>
