@@ -1,0 +1,23 @@
+$color: green;
+$color2: black;
+div {
+    ul {
+        font-size: 14px;
+        color: $color2;
+    }
+
+    ol {
+        font-size: 18px;
+        color: $color2;
+    }
+}
+
+ul {
+    font-size: 14px;
+    color: $color;
+}
+
+ol {
+    font-size: 18px;
+    color: $color;
+}

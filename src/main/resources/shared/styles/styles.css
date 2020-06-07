@@ -55,7 +55,58 @@ div {
 ol li {
     color: blue;
 }
-
+/* Immediate child */
 ol > li {
     color: Red;
+}
+
+/* attributes value */
+input[type=text] {
+    background-color: red;
+}
+
+button {
+    background-color: green;
+    font-size: 24px;
+}
+
+button:hover {
+    background-color: orange;
+}
+
+a::before {
+    content: "\21d2 Click Here: ";
+    font-weight: bold;
+}
+
+p::selection {
+    color: green;
+    background-color: yellow;
+}
+
+/* SOme content need not required when you are printing like submit button */
+@media print {
+    .screen-only {
+        display: none;
+    }
+}
+
+@media (max-width: 499px) {
+    body {
+        background-color: red;
+    }
+
+    h1::before {
+        content: "Welcome "
+    }
+}
+
+@media (min-width: 500px) {
+    body {
+        background-color: blue;
+    }
+
+    h1::before {
+        content: "Welcome Sir "
+    }
 }
