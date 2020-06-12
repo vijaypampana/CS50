@@ -1,12 +1,22 @@
 $Background: black;
 $h1Color: darkmagenta;
-$textColor1: White;
-$defaultMargin: 40px;
+$textColor1: white;
+$defaultMargin: 20px;
+$defaultPadding: 20px;
 
 body {
     background-color: $Background;
     margin: $defaultMargin;
+    padding: $defaultPadding;
     color: $textColor1;
+}
+
+textarea {
+    border-color:#FF9900;
+    border-style:Solid;
+    font-family:Courier New;
+    height:400px;
+    width:100%;
 }
 
 div h1 {
@@ -14,11 +24,15 @@ div h1 {
     text-align: center;
     background-color: $h1Color;
     border: 3px solid black;
-    margin: 75px;
+    margin: 25px;
 }
 
 .logo {
     position: absolute;
     top: 0px;
     right: 0px;
+}
+
+#xmlbfButton {
+
 }

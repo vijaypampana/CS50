@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block header %}
+    <div class="row">
+       <div class="col-md-12">
+          <h1>Payveris XML Beautifier</h1>
+       </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+   <form name="form1" method="post" action="./" id="form1">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-md-12">
+               <span class="orange">Paste an XML document and make it look beautiful</span>
+               <br></br>
+            </div>
+            <div class="col-md-12">
+                     <textarea name="XmlDocumentTextBox" rows="2" cols="20" id="XmlDocumentTextBox"
+                               title="Paste an XML document and hit &quot;beautify now&quot;..."></textarea>
+               <label class="style1" style="font-size: xx-small">
+               </label>
+            </div>
+         </div>
+         <br></br>
+         <div class="row">
+            <div class="col-md-12">
+               <input type="submit" name="BtfNowButton" value="beautify now!" id="xmlbfButton"
+                      class="btn btn-lg btn-warning beautify-button"/>
+            </div>
+         </div>
+      </div>
+   </form>
+
+{% endblock %}
+
+{% block footer %}
+    <p>Standard Footer</p>
+{% endblock %}
+
+
