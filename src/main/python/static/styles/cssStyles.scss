@@ -1,0 +1,24 @@
+$Background: black;
+$h1Color: darkmagenta;
+$textColor1: White;
+$defaultMargin: 40px;
+
+body {
+    background-color: $Background;
+    margin: $defaultMargin;
+    color: $textColor1;
+}
+
+div h1 {
+    color: $textColor1;
+    text-align: center;
+    background-color: $h1Color;
+    border: 3px solid black;
+    margin: 75px;
+}
+
+.logo {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}

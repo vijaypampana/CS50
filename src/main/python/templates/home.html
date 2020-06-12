@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flask Utilities</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/styles/cssStyles.css">
+    </head>
+    <body>
+        <div>
+            <span>
+            <img class="logo" src="static/images/payverislogo.png">
+            <h1 class="d-flex justify-content-center">Welcome Home Bhaiyya</h1>
+            </span>
+            <p>This is a centralized page for creating some basic utilities</p>
+
+            <ol>
+                <li>
+                    <span>Utility for JSON Beautifier : </span>
+                    <span><a href="{{ url_for('jsonBeautifier') }}">Click here</a></span>
+                </li>
+                <li>
+                    <span>Utility for XML Beautifier : </span>
+                    <span><a href="{{ url_for('xmlBeautifier') }}">Click here</a></span>
+                </li>
+                <li>
+                    <span>Utility for Creating a test user : </span>
+                    <span><a href="{{ url_for('createUser') }}">Click here</a></span>
+                </li>
+            </ol>
+        </div>
+
+    </body>
+</html>
