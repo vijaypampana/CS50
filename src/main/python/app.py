@@ -30,7 +30,6 @@ def xmlBeautify():
 @app.route('/jsonBeautify', methods=["POST"])
 def jsonBeautify():
     rawJson1 = request.form.get("JSONDocumentTextBox", type=str)
-    # return rawJson1
     return render_template("jsonBeautifier.html", rawJson=json.dumps(json.loads(rawJson1), indent=2))
 
 if __name__ == "__main__":
