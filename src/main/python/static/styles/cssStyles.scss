@@ -1,8 +1,8 @@
-$Background: black;
-$h1Color: darkmagenta;
-$textColor1: white;
-$defaultMargin: 20px;
-$defaultPadding: 20px;
+$Background: white;
+$h1Color: cyan;
+$textColor1: black;
+$defaultMargin: 10px;
+$defaultPadding: 10px;
 
 body {
     background-color: $Background;
@@ -24,7 +24,7 @@ div h1 {
     text-align: center;
     background-color: $h1Color;
     border: 3px solid black;
-    margin: 25px;
+    margin: 10px;
 }
 
 .logo {

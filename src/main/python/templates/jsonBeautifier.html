@@ -10,7 +10,7 @@
 
 {% block body %}
 
-   <form name="form1" method="post" action="{{ url_for('jsonBeautifier') }}" id="form1">
+   <form name="form1" method="post" action="{{ url_for('jsonBeautify') }}" id="form1">
       <div class="container-fluid">
          <div class="row">
             <div class="col-md-12">
@@ -18,7 +18,7 @@
                <br></br>
             </div>
             <div class="col-md-12">
-                     <textarea name="jsonDocumentTextBox" rows="2" cols="20" id="jsonDocumentTextBox"
+                     <textarea name="JSONDocumentTextBox" rows="2" cols="20" id="JSONDocumentTextBox"
                                title="Paste an JSON document and hit &quot;beautify now&quot;...">{{ rawJson }}</textarea>
                <label class="style1" style="font-size: xx-small">
                </label>
@@ -27,7 +27,7 @@
          <br></br>
          <div class="row">
             <div class="col-md-12">
-               <input type="submit" name="BtfNowButton" value="beautify now!" id="xmlbfButton"
+               <input type="submit" name="BtfNowButton" value="beautify now!" id="jsonbfButton"
                       class="btn btn-lg btn-warning beautify-button"/>
             </div>
          </div>

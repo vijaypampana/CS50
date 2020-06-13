@@ -27,6 +27,11 @@ def xmlBeautify():
     return render_template("xmlBeautifier.html", rawXml=str.replace((BeautifulSoup(rawXml, "lxml").prettify(encoding='UTF-8')).decode("UTF-8"), "\n", "\r\n"))
     # return etree.tostring(etree.parse(rawXml), pretty_print=True, xml_declaration=True, encoding='UTF-8')
 
+@app.route('/jsonBeautify', methods=["POST"])
+def jsonBeautify():
+    rawJson1 = request.form.get("JSONDocumentTextBox", type=str)
+    # return rawJson1
+    return render_template("jsonBeautifier.html", rawJson=json.dumps(json.loads(rawJson1), indent=2))
 
 if __name__ == "__main__":
     app.run()
