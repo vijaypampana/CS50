@@ -1,23 +1,43 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Flask Utilities</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="static/styles/cssStyles.css">
-    </head>
-    <body>
-        <div>
-            <h1 class="d-flex justify-content-center">Welcome Home Bhaiyya</h1>
-            <p>This is a centralized page for creating some basic utilities</p>
+{% extends "layout.html" %}
 
-            <ol>
-                <li>
-                    <span>Utility for JSON Beautifier : </span>
-                    <span><a href="{{ url_for('jsonBeautifier') }}"></a></span>
-                </li>
-            </ol>
-        </div>
+{% block header %}
+    <div class="row">
+       <div class="col-md-12">
+          <h1>Payveris JSON Beautifier</h1>
+       </div>
+    </div>
+{% endblock %}
 
-    </body>
-</html>
+{% block body %}
+
+   <form name="form1" method="post" action="{{ url_for('jsonBeautifier') }}" id="form1">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-md-12">
+               <span class="orange">Paste an JSON document and make it look beautiful</span>
+               <br></br>
+            </div>
+            <div class="col-md-12">
+                     <textarea name="jsonDocumentTextBox" rows="2" cols="20" id="jsonDocumentTextBox"
+                               title="Paste an JSON document and hit &quot;beautify now&quot;...">{{ rawJson }}</textarea>
+               <label class="style1" style="font-size: xx-small">
+               </label>
+            </div>
+         </div>
+         <br></br>
+         <div class="row">
+            <div class="col-md-12">
+               <input type="submit" name="BtfNowButton" value="beautify now!" id="xmlbfButton"
+                      class="btn btn-lg btn-warning beautify-button"/>
+            </div>
+         </div>
+      </div>
+   </form>
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
+
+
