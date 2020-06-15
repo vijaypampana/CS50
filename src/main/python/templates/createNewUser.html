@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block header %}
+<div class="row">
+    <div class="col-md-12">
+        <h1>Payveris Create a new User Page</h1>
+    </div>
+</div>
+{% endblock %}
+
+{% block body %}
+<br>
+<form name="form1" method="post" action="{{ url_for('createUser') }}" id="form1">
+    <div class="container-fluid">
+        <div class="row form-group" >
+            <label for="staticEnv" class="col-sm-1 col-form-label">Env</label>
+            <div class="col-sm-1">
+                <select id="env" name="env">
+                    <option>qa</option>
+                    <option>qa2</option>
+                    <option>qa3</option>
+                    <option>demo</option>
+                    <option>dev</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <label for="version" class="col-sm-1 col-form-label">Version</label>
+            <div class="col-sm-1">
+                <input class="form-control" type="text" id="version" name="version" placeholder="version" maxlength="4">
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <label for="apiKey" class="col-sm-1 col-form-label">api Key</label>
+            <div class="col-sm-5">
+                <input class="form-control" type="text" id="apiKey" name="apikey" placeholder="api key" >
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <label for="clientCode" class="col-sm-1 col-form-label">Client Code</label>
+            <div class="col-sm-2">
+                <input class="form-control" type="text" id="clientCode" name="clientCode" placeholder="clientCode" >
+            </div>
+        </div>
+        <br></br>
+        <div class="row form-group">
+            <input class="form-control col-sm-3" type="text" placeholder="Generate userCode here..." readonly>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <input type="submit" name="cuNowButton" value="Create User" id="createUserButton"
+                       class="btn btn-lg btn-warning beautify-button"/>
+            </div>
+        </div>
+    </div>
+</form>
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
+
+

@@ -1,36 +1,43 @@
 from flask import Flask, render_template, request
-from bs4 import BeautifulSoup
-from lxml import etree
-import json
+import utilities
 
-app = Flask(__name__)   #A new web application is a flask application, app is a variable which can be used in the below file ex @app.route
+app = Flask(__name__)  # A new web application is a flask application, app is a variable which can be used in the below file ex @app.route
+
 
 @app.route("/")
 def index():
     return render_template("index.html")
 
-@app.route("/jsonBeautifier")
+
+@app.route("/jsonBeautifier", methods=['GET', 'POST'])
 def jsonBeautifier():
-    return render_template("jsonBeautifier.html")
+    if request.method == 'POST':
+        rawJson = request.form.get("JSONDocumentTextBox", type=str)
+        return render_template("jsonBeautifier.html", rawJson=utilities.jsonBeautifierprocess(rawJson))
+    else:
+        return render_template("jsonBeautifier.html")
 
-@app.route('/xmlBeautifier')
+
+@app.route('/xmlBeautifier', methods=['GET', 'POST'])
 def xmlBeautifier():
-    return render_template("xmlBeautifier.html")
+    if request.method == 'POST':
+        rawXml = request.form.get("XmlDocumentTextBox")
+        return render_template("xmlBeautifier.html", rawXml=utilities.xmlBeautifierprocess(rawXml))
+    else:
+        return render_template("xmlBeautifier.html")
 
-@app.route("/createUser")
+
+@app.route("/createUser", methods=['GET', 'POST'])
 def createUser():
-    return "Welcome to Create Automated User Page"
+    if request.method == 'POST':
+        env = request.form.get("env")
+        version = request.form.get("version")
+        apikey = request.form.get("apikey")
+        clientCode = request.form.get("clientCode")
+        return render_template("createNewUser.html", userCode=utilities.createNormalUser(env, version, apikey, clientCode))
+    else:
+        return render_template("createNewUser.html")
 
-@app.route('/xmlBeautify', methods=["POST"])
-def xmlBeautify():
-    rawXml = request.form.get("XmlDocumentTextBox")
-    return render_template("xmlBeautifier.html", rawXml=str.replace((BeautifulSoup(rawXml, "lxml").prettify(encoding='UTF-8')).decode("UTF-8"), "\n", "\r\n"))
-    # return etree.tostring(etree.parse(rawXml), pretty_print=True, xml_declaration=True, encoding='UTF-8')
-
-@app.route('/jsonBeautify', methods=["POST"])
-def jsonBeautify():
-    rawJson1 = request.form.get("JSONDocumentTextBox", type=str)
-    return render_template("jsonBeautifier.html", rawJson=json.dumps(json.loads(rawJson1), indent=2))
 
 if __name__ == "__main__":
     app.run()
