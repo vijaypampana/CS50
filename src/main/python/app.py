@@ -39,5 +39,10 @@ def createUser():
         return render_template("createNewUser.html")
 
 
+@app.route("/limitValidator", methods=['GET', 'POST'])
+def limitValidator():
+    return "This is a limit validator Page"
+
+
 if __name__ == "__main__":
     app.run()

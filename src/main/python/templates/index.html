@@ -7,21 +7,31 @@
 {% endblock %}
 
 {% block body %}
+
     <p>This is a centralized page for creating some basic utilities</p>
 
     <ol>
+
         <li>
             <span>Utility for JSON Beautifier : </span>
             <span><a href="{{ url_for('jsonBeautifier') }}">Click here</a></span>
         </li>
+
         <li>
             <span>Utility for XML Beautifier : </span>
             <span><a href="{{ url_for('xmlBeautifier') }}">Click here</a></span>
         </li>
+
         <li>
             <span>Utility for Creating a test user : </span>
             <span><a href="{{ url_for('createUser') }}">Click here</a></span>
         </li>
+
+        <li>
+            <span>Utility for Limit Validation : </span>
+            <span><a href="{{ url_for('limitValidator') }}">Click here</a></span>
+        </li>
+
     </ol>
 
 {% endblock %}
